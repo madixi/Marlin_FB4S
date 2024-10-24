@@ -789,9 +789,9 @@ RN13S           - плата Robin Nano-s 1.3
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
-	  #define DEFAULT_Kp  13.38
-	  #define DEFAULT_Ki   1.26
-	  #define DEFAULT_Kd  35.56
+    #define DEFAULT_Kp  13.38
+    #define DEFAULT_Ki   1.26
+    #define DEFAULT_Kd  35.56
   #endif
 #endif
 
