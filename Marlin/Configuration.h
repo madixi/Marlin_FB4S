@@ -667,9 +667,9 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
-    #define DEFAULT_Kp  17.04
-    #define DEFAULT_Ki   1.31
-    #define DEFAULT_Kd  55.34
+    #define DEFAULT_Kp  13.38
+    #define DEFAULT_Ki   1.26
+    #define DEFAULT_Kd  35.56
   #endif
 #endif
 
@@ -752,9 +752,9 @@
 
   // 120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   // from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-  #define DEFAULT_bedKp 40.68
-  #define DEFAULT_bedKi 7.93
-  #define DEFAULT_bedKd 139.15
+	#define DEFAULT_bedKp 198.13
+	#define DEFAULT_bedKi 37.85
+	#define DEFAULT_bedKd 259.28
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
 
@@ -1869,7 +1869,7 @@
 #if ENABLED(FILAMENT_RUNOUT_SENSOR)
   #define FIL_RUNOUT_ENABLED_DEFAULT false // Enable the sensor on startup. Override with M412 followed by M500.
   #define NUM_RUNOUT_SENSORS   1          // Number of sensors, up to one per extruder. Define a FIL_RUNOUT#_PIN for each.
-  
+
   #ifdef  PRINTER_NAME_FB5
     #define FIL_RUNOUT_STATE     LOW // Pin state indicating that filament is NOT present.
     #define FIL_RUNOUT_PULLUP               // Use internal pullup for filament runout pins.
@@ -1879,12 +1879,12 @@
     #define FIL_RUNOUT_STATE     HIGH // Pin state indicating that filament is NOT present.
     #define FIL_RUNOUT_PULLDOWN               // Use internal pullup for filament runout pins.
   #endif
-  
+
   #ifndef FIL_RUNOUT_STATE
     #define FIL_RUNOUT_STATE     LOW // Pin state indicating that filament is NOT present.
     #define FIL_RUNOUT_PULLUP               // Use internal pullup for filament runout pins.
   #endif
-  
+
   //#define WATCH_ALL_RUNOUT_SENSORS      // Execute runout script on any triggering sensor, not only for the active extruder.
                                           // This is automatically enabled for MIXING_EXTRUDERs.
 
