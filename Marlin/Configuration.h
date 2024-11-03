@@ -28,6 +28,7 @@
 В параметре PRINTER_DRV_TYPE нужно установить параметр, соответствующий вашей конфигурации:
 
 RN11_ALL_2208   - плата  Robin Nano 1.1 (FlyingBear Reborn 2.0), все драйвера 2208, 2225, 2209 или 2226
+RN11_ALL_2208_UART   - плата  Robin Nano 1.1 (FlyingBear Reborn 2.0), все драйвера 2208, 2225, 2209 или 2226 + UART
 RN11_A4988      - плата Robin Nano 1.1, все драйвера A4988
 RN11_A4988_2208 - плата Robin Nano 1.1, 2 драйвера A4988, 2 драйвера 2208
 RB30            - плата FlyingBear Reborn 3.0
@@ -42,6 +43,20 @@ RN13S           - плата Robin Nano-s 1.3
 #endif
 
 #if PRINTER_DRV_TYPE == RN11_ALL_2208
+  #define USR_E0_DIR true
+  #define USR_E0_TYPE TMC2208_STANDALONE
+
+  #define USR_X_DIR false
+  #define USR_X_TYPE TMC2208_STANDALONE
+
+  #define USR_Y_DIR false
+  #define USR_Y_TYPE TMC2208_STANDALONE
+
+  #define USR_Z_DIR true
+  #define USR_Z_TYPE TMC2208_STANDALONE
+#endif
+
+#if PRINTER_DRV_TYPE == RN11_ALL_2208_UART
   #define USR_E0_DIR true
   #define USR_E0_TYPE TMC2208_STANDALONE
 
