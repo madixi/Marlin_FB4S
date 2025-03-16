@@ -23,8 +23,8 @@
 
 #include "flying_bear_drivers.h"
 /***
-Конфигурация драйверов принтера. 
- 
+Конфигурация драйверов принтера.
+
 В параметре PRINTER_DRV_TYPE нужно установить параметр, соответствующий вашей конфигурации:
 
 RN11_ALL_2208   - плата  Robin Nano 1.1 (FlyingBear Reborn 2.0), все драйвера 2208, 2225, 2209 или 2226
@@ -45,10 +45,10 @@ RN13S           - плата Robin Nano-s 1.3
 #if PRINTER_DRV_TYPE == RN11_ALL_2208
   #define USR_E0_DIR true
   #define USR_E0_TYPE TMC2208_STANDALONE
-  
+
   #define USR_X_DIR false
   #define USR_X_TYPE TMC2208_STANDALONE
-  
+
   #define USR_Y_DIR false
   #define USR_Y_TYPE TMC2208_STANDALONE
 
@@ -129,13 +129,13 @@ RN13S           - плата Robin Nano-s 1.3
 #if PRINTER_DRV_TYPE == RN13_A4988_2208
   #define USR_E0_DIR false
   #define USR_E0_TYPE A4988
-  
+
   #define USR_X_DIR false
   #define USR_X_TYPE TMC2208_STANDALONE
-  
+
   #define USR_Y_DIR false
   #define USR_Y_TYPE TMC2208_STANDALONE
-  
+
   #define USR_Z_DIR false
   #define USR_Z_TYPE A4988
 #endif
@@ -148,13 +148,13 @@ RN13S           - плата Robin Nano-s 1.3
     #define USR_E0_DIR false
     #define USR_E0_TYPE TMC2208_STANDALONE
   #endif
-  
+
   #define USR_X_DIR true
   #define USR_X_TYPE TMC2208_STANDALONE
 
   #define USR_Y_DIR true
   #define USR_Y_TYPE TMC2208_STANDALONE
-  
+
   #define USR_Z_DIR false
   #define USR_Z_TYPE TMC2208_STANDALONE
 #endif
@@ -673,7 +673,7 @@ RN13S           - плата Robin Nano-s 1.3
  *   999 : Dummy Table that ALWAYS reads 100°C or the temperature defined below.
  *
  */
-#define TEMP_SENSOR_0 1
+#define TEMP_SENSOR_0 13
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_3 0
@@ -756,7 +756,7 @@ RN13S           - плата Robin Nano-s 1.3
 // Above this temperature the heater will be switched off.
 // This can protect components from overheating, but NOT from shorts and failures.
 // (Use MINTEMP for thermistor short/failure protection.)
-#define HEATER_0_MAXTEMP 335
+#define HEATER_0_MAXTEMP 285
 #define HEATER_1_MAXTEMP 275
 #define HEATER_2_MAXTEMP 275
 #define HEATER_3_MAXTEMP 275
@@ -1931,7 +1931,7 @@ RN13S           - плата Robin Nano-s 1.3
 #if ENABLED(FILAMENT_RUNOUT_SENSOR)
   #define FIL_RUNOUT_ENABLED_DEFAULT true // Enable the sensor on startup. Override with M412 followed by M500.
   #define NUM_RUNOUT_SENSORS   1          // Number of sensors, up to one per extruder. Define a FIL_RUNOUT#_PIN for each.
-  
+
   #ifdef  PRINTER_NAME_FB5
     #define FIL_RUNOUT_STATE     LOW // Pin state indicating that filament is NOT present.
     #define FIL_RUNOUT_PULLUP               // Use internal pullup for filament runout pins.
@@ -1941,12 +1941,12 @@ RN13S           - плата Robin Nano-s 1.3
     #define FIL_RUNOUT_STATE     HIGH // Pin state indicating that filament is NOT present.
     #define FIL_RUNOUT_PULLDOWN               // Use internal pullup for filament runout pins.
   #endif
-  
+
   #ifndef FIL_RUNOUT_STATE
     #define FIL_RUNOUT_STATE     LOW // Pin state indicating that filament is NOT present.
     #define FIL_RUNOUT_PULLUP               // Use internal pullup for filament runout pins.
   #endif
-  
+
   //#define WATCH_ALL_RUNOUT_SENSORS      // Execute runout script on any triggering sensor, not only for the active extruder.
                                           // This is automatically enabled for MIXING_EXTRUDERs.
 
@@ -2376,7 +2376,7 @@ EEPROM_W25Q
 #undef SRAM_EEPROM_EMULATION
 #undef I2C_EEPROM_AT24C16
 #undef SPI_EEPROM_W25Q
-#undef USE_WIRED_EEPROM 
+#undef USE_WIRED_EEPROM
 #define MARLIN_EEPROM_SIZE  4096
 #endif
 
