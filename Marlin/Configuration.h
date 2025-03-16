@@ -804,9 +804,15 @@ RN13S           - плата Robin Nano-s 1.3
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
+    /* Sibmaker Aluminium Stock
     #define DEFAULT_Kp 14.24
     #define DEFAULT_Ki 1.17
     #define DEFAULT_Kd 43.29
+    */
+    // Lime head E3D V6 Copter
+    #define DEFAULT_Kp 21.92
+    #define DEFAULT_Ki 2.01
+    #define DEFAULT_Kd 59.62
 #endif
 #endif
 
@@ -1304,8 +1310,9 @@ RN13S           - плата Robin Nano-s 1.3
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 410 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 694 }
 // E 410 for Sibmaker Direct Numa 17
+// E 694 for Alien Direct Numa 14
 
 /**
  * Default Max Feed Rate (linear=mm/s, rotational=°/s)
