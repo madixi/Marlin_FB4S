@@ -815,9 +815,9 @@ RN13S           - плата Robin Nano-s 1.3
     #define DEFAULT_Kd 43.29
     */
     // Lime head E3D V6 Copter
-    #define DEFAULT_Kp 21.92
-    #define DEFAULT_Ki 2.01
-    #define DEFAULT_Kd 59.62
+    #define DEFAULT_Kp 19.32
+    #define DEFAULT_Ki 1.69
+    #define DEFAULT_Kd 55.24
   #endif
 #endif
 
