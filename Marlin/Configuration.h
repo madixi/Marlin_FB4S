@@ -804,6 +804,11 @@ RN13S           - плата Robin Nano-s 1.3
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
+    /* default values
+    #define DEFAULT_Kp  17.04
+    #define DEFAULT_Ki   1.31
+    #define DEFAULT_Kd  55.34
+    */
     /* Sibmaker Aluminium Stock
     #define DEFAULT_Kp 14.24
     #define DEFAULT_Ki 1.17
